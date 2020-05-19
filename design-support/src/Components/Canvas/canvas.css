@@ -1,0 +1,14 @@
+.Canvas {
+    text-align: center;
+    background-color: white;
+}
+
+.canvas-draw {
+    width: 800px;
+    height: 450px;
+    border: 2px solid black;
+}
+
+.Button {
+    
+}
