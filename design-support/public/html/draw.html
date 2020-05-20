@@ -29,26 +29,26 @@
       <div class="col-md-4">
         <div class="row all-select">
           <div class="col-md-6" onclick="handleClickSupport(event)">
-            <img src="../asset/img/38335_AB.jpg" alt="">
+            <img class="default reset" src="../asset/img/38335_AB.jpg" alt="">
           </div>
-          <div class="col-md-6">
-            <img src="../asset/img/38442_AB.jpg" alt="">
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-6">
-            <img src="../asset/img/39202_AB.jpg" alt="">
-          </div>
-          <div class="col-md-6">
-            <img src="../asset/img/40720_AB.jpg" alt="">
+          <div class="col-md-6 " onclick="handleClickSupport(event)">
+            <img class="default reset" src="../asset/img/38442_AB.jpg" alt="">
           </div>
         </div>
         <div class="row">
-          <div class="col-md-6">
-            <img src="../asset/img/41484_AB.jpg" alt="">
+          <div onclick="handleClickSupport(event)" class="col-md-6">
+            <img class="default reset" src="../asset/img/39202_AB.jpg" alt="">
           </div>
-          <div class="col-md-6">
-            <img src="../asset/img/DesignIdea.jpg" alt="">
+          <div onclick="handleClickSupport(event)" class="col-md-6">
+            <img class="default reset" src="../asset/img/40720_AB.jpg" alt="">
+          </div>
+        </div>
+        <div class="row">
+          <div onclick="handleClickSupport(event)" class="col-md-6">
+            <img class="default" src="../asset/img/41484_AB.jpg" alt="">
+          </div>
+          <div onclick="handleClickSupport(event)" class="col-md-6">
+            <img class="default" src="../asset/img/DesignIdea.jpg" alt="">
           </div>
         </div>
       </div>
@@ -56,8 +56,15 @@
         <canvas id="canvas" class="draw-canvas"></canvas>
       </div>
     </div>
-
   </div>
+  <img src="" alt="scream">
+
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark toolbar-bottom">
+    <ul class="navbar-nav">
+      <button onclick="uploadFile(event)">Click to Continue</button>
+    </ul>
+  </nav>
+
 
   <!-- JS, Popper.js, and jQuery -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"

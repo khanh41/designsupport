@@ -42,5 +42,27 @@ function handleMouseMove(event) {
 // handle event click image support
 
 const handleClickSupport = (event) => {
-  console.log(event.target);
+  let arr = document.getElementsByClassName("reset");
+  for (let i = 0; i < arr.length; i++) {
+    arr[i].classList.remove("border-draw");
+  }
+  event.target.removeAttribute("class");
+  event.target.setAttribute("class", "border-draw reset");
+  var canvas = document.getElementById('canvas');
+  const context = canvas.getContext('2d');
+  context.clearRect(0, 0, canvas.width, canvas.height);
+  context.drawImage(event.target, 350, 150);
+}
+
+const uploadFile = (event) => {
+  // var can = document.getElementById('canvas1');
+  // var ctx = can.getContext('2d');
+  // var img = new Image();
+  // img.src = can.toDataURL();
+  // document.body.appendChild(img);
+
+  let img = new Image();
+  let canvas = document.getElementById('canvas');
+  img.src = canvas.toDataURL('../../static/draw.jpg');
+  document.body.appendChild(img);
 }
