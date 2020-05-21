@@ -1,3 +1,4 @@
+
 var canvas = document.getElementById('canvas');
 canvas.width = 800;
 canvas.height = 450;
@@ -57,14 +58,9 @@ const handleClickSupport = (event) => {
 }
 
 const uploadFile = (event) => {
-  // var can = document.getElementById('canvas1');
-  // var ctx = can.getContext('2d');
-  // var img = new Image();
-  // img.src = can.toDataURL();
-  // document.body.appendChild(img);
+  const urlImg = 'https://images.unsplash.com/photo-1588080064985-cb6ae38645bc?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max';
 
-  let img = new Image();
-  let canvas = document.getElementById('canvas');
-  img.src = canvas.toDataURL('../../static/draw.jpg');
-  document.body.appendChild(img);
+  var storageRef = firebase.storage().ref();
+  storageRef.child(urlImg);
+
 }

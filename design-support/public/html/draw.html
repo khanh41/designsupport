@@ -126,6 +126,8 @@
     </div>
   </div>
 
+  <button onclick="uploadFile(event)">Upload file</button>
+
   <!-- JS, Popper.js, and jQuery -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -138,6 +140,32 @@
     crossorigin="anonymous"></script>
 
   <script language="javascript" src="../js/draw.js"></script>
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-app.js"></script>
+  
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+       https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-analytics.js"></script>
+  
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyARDzh56n2aProLpn3tT4bRbmIq2IjsGGE",
+      authDomain: "designidea-1d537.firebaseapp.com",
+      databaseURL: "https://designidea-1d537.firebaseio.com",
+      projectId: "designidea-1d537",
+      storageBucket: "designidea-1d537.appspot.com",
+      messagingSenderId: "757546223188",
+      appId: "1:757546223188:web:2a4785a3db576d0456cfc1",
+      measurementId: "G-JH0H2KVW99"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+  </script>
+
+  </body>
 </body>
 
 </html>
