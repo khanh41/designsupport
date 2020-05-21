@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
     integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   <link rel="stylesheet" href="../css/draw.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -17,169 +18,78 @@
         data-toggle="collapse" data-target="#navbarResponsive"><span class="navbar-toggler-icon"></span></button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="nav navbar-nav ml-auto">
-          <li class="nav-item" role="presentation"><a class="nav-link" href="#">Sign Up</a></li>
-          <li class="nav-item" role="presentation"><a class="nav-link" href="#">Log In</a></li>
+          <button id="btn-done" disabled type="button" class="btn btn-success" data-toggle="modal"
+            data-target="#myModal">DONE <img src="../asset/arrow.png" alt="" class="arrow-right"></button>
         </ul>
       </div>
     </div>
   </nav>
 
   <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-    <div class="modal-dialog modal-layout">
+    <div class="modal-dialog modal-layout modal-design">
       <!--Modal content-->
-      <div class="modal-content modal-container">
-        <div class="container">
+      <div class="modal-content modal-container modal-design-diea">
+        <div class="container myListImage">
           <!-- Card deck -->
-          <div class="card-deck row">
-            <div class="col-xs-12 col-sm-6 col-md-4">
-              <!-- Card -->
-              <div class="card">
-                <!--Card image-->
-                <div class="view overlay">
-                  <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/16.jpg"
-                    alt="Card image cap">
-                  <a href="#!">
-                    <div class="mask rgba-white-slight"></div>
-                  </a>
-                </div>
-                <!--Card content-->
-                <div class="card-body">
-                  <!--Title-->
-                  <h4 class="card-title">1 Card title</h4>
-                  <!--Text-->
-                  <button type="button" class="btn btn-light-blue btn-md">Read more</button>
-                </div>
+          <ul class="card-deck row ">
+            <li class="col-xs-12 col-sm-6 col-md-4">
+              <div class="view overlay">
+                <input type="checkbox" id="myCheckbox1" />
+                <label class="myListImage" for="myCheckbox1"><img class="card-img-top" id="img1"
+                    src="https://mdbootstrap.com/img/Photos/Others/images/16.jpg" alt="Card image cap"></label>
               </div>
-              <!-- Card -->
-            </div>
+            </li>
 
-            <div class="col-xs-12 col-sm-6 col-md-4">
-              <!-- Card -->
-              <div class="card mb-4">
-                <!--Card image-->
-                <div class="view overlay">
-                  <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/14.jpg"
-                    alt="Card image cap">
-                  <a href="#!">
-                    <div class="mask rgba-white-slight"></div>
-                  </a>
-                </div>
-                <!--Card content-->
-                <div class="card-body">
-                  <!--Title-->
-                  <h4 class="card-title">2 Card title</h4>
-                  <button type="button" class="btn btn-light-blue btn-md">Read more</button>
-                </div>
+            <li class="col-xs-12 col-sm-6 col-md-4">
+              <div class="view overlay">
+                <input type="checkbox" id="myCheckbox2" />
+                <label class="myListImage" for="myCheckbox2"><img class="card-img-top" id="img2"
+                    src="https://mdbootstrap.com/img/Photos/Others/images/14.jpg" alt="Card image cap"></label>
               </div>
-              <!-- Card -->
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-4">
-              <!-- Card -->
-              <div class="card mb-4">
-                <!--Card image-->
-                <div class="view overlay">
-                  <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/15.jpg"
-                    alt="Card image cap">
-                  <a href="#!">
-                    <div class="mask rgba-white-slight"></div>
-                  </a>
-                </div>
-                <!--Card content-->
-                <div class="card-body">
-                  <!--Title-->
-                  <h4 class="card-title">3 Card title</h4>
-                  <button type="button" class="btn btn-light-blue btn-md">Read more</button>
-                </div>
-              </div>
-              <!-- Card -->
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-4">
-              <!-- Card -->
-              <div class="card">
-                <!--Card image-->
-                <div class="view overlay">
-                  <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/16.jpg"
-                    alt="Card image cap">
-                  <a href="#!">
-                    <div class="mask rgba-white-slight"></div>
-                  </a>
-                </div>
-                <!--Card content-->
-                <div class="card-body">
-                  <!--Title-->
-                  <h4 class="card-title">4 Card title</h4>
-                  <button type="button" class="btn btn-light-blue btn-md">Read more</button>
+            </li>
 
-                </div>
+            <li class="col-xs-12 col-sm-6 col-md-4">
+              <div class="view overlay">
+                <input type="checkbox" id="myCheckbox3" />
+                <label class="myListImage" for="myCheckbox3"><img class="card-img-top" id="img3"
+                    src="https://mdbootstrap.com/img/Photos/Others/images/14.jpg" alt="Card image cap"></label>
               </div>
-              <!-- Card -->
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-4">
-              <!-- Card -->
-              <div class="card mb-4">
-                <!--Card image-->
-                <div class="view overlay">
-                  <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/14.jpg"
-                    alt="Card image cap">
-                  <a href="#!">
-                    <div class="mask rgba-white-slight"></div>
-                  </a>
-                </div>
-                <!--Card content-->
-                <div class="card-body">
-                  <!--Title-->
-                  <h4 class="card-title">5 Card title</h4>
-                  <button type="button" class="btn btn-light-blue btn-md">Read more</button>
-                </div>
+            </li>
+
+            <li class="col-xs-12 col-sm-6 col-md-4">
+              <div class="view overlay">
+                <input type="checkbox" id="myCheckbox4" />
+                <label class="myListImage" for="myCheckbox4"><img class="card-img-top" id="img4"
+                    src="https://mdbootstrap.com/img/Photos/Others/images/14.jpg" alt="Card image cap"></label>
               </div>
-              <!-- Card -->
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-4">
-              <!-- Card -->
-              <div class="card mb-4">
-                <!--Card image-->
-                <div class="view overlay">
-                  <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/15.jpg"
-                    alt="Card image cap">
-                  <a href="#!">
-                    <div class="mask rgba-white-slight"></div>
-                  </a>
-                </div>
-                <!--Card content-->
-                <div class="card-body">
-                  <!--Title-->
-                  <h4 class="card-title">6 Card title</h4>
-                  <!--Text-->
-                  <button type="button" class="btn btn-light-blue btn-md">Read more</button>
-                </div>
+            </li>
+
+            <li class="col-xs-12 col-sm-6 col-md-4">
+              <div class="view overlay">
+                <input type="checkbox" id="myCheckbox5" />
+                <label class="myListImage" for="myCheckbox5"><img class="card-img-top" id="img5"
+                    src="https://mdbootstrap.com/img/Photos/Others/images/14.jpg" alt="Card image cap"></label>
               </div>
-              <!-- Card -->
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-4">
-              <!-- Card -->
-              <div class="card mb-4">
-                <!--Card image-->
-                <div class="view overlay">
-                  <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/15.jpg"
-                    alt="Card image cap">
-                  <a href="#!">
-                    <div class="mask rgba-white-slight"></div>
-                  </a>
-                </div>
-                <!--Card content-->
-                <div class="card-body">
-                  <!--Title-->
-                  <h4 class="card-title">7 Card title</h4>
-                  <button type="button" class="btn btn-light-blue btn-md">Read more</button>
-                </div>
+            </li>
+
+            <li class="col-xs-12 col-sm-6 col-md-4">
+              <div class="view overlay">
+                <input type="checkbox" id="myCheckbox6" />
+                <label class="myListImage" for="myCheckbox6"><img class="card-img-top" id="img6"
+                    src="https://mdbootstrap.com/img/Photos/Others/images/14.jpg" alt="Card image cap"></label>
               </div>
-              <!-- Card -->
-            </div>
-          </div>
-          <!-- Card deck -->
+            </li>
+          </ul>
         </div>
+        <div class="col-xs-12 col-sm-6 col-md-12 next-post">
+          <button type="button" class="btn btn-outline-primary waves-effect btn-next-post">Continue to post
+          </button>
+        </div>
+        </ul>
+        <!-- Card deck -->
       </div>
     </div>
+  </div>
   </div>
 
   <div class="container draw">
@@ -215,15 +125,6 @@
       </div>
     </div>
   </div>
-  <img src="" alt="scream">
-
-  <nav class="navbar navbar-expand-sm bg-dark navbar-dark toolbar-bottom">
-    <ul class="navbar-nav">
-      <button class="btn-success" onclick="uploadFile(event)">Click to Continue</button>
-      <button class="btn-danger" data-toggle="modal" data-target="#myModal">DONE</button>
-    </ul>
-  </nav>
-
 
   <!-- JS, Popper.js, and jQuery -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"

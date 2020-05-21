@@ -18,6 +18,7 @@ function getPointOfCanvas(event) {
 
 function handleMouseDown(event) {
   drawing = true;
+  document.getElementById("btn-done").removeAttribute("disabled");
   startPoint = getPointOfCanvas(event);
 }
 
@@ -46,6 +47,7 @@ const handleClickSupport = (event) => {
   for (let i = 0; i < arr.length; i++) {
     arr[i].classList.remove("border-draw");
   }
+  document.getElementById("btn-done").removeAttribute("disabled");
   event.target.removeAttribute("class");
   event.target.setAttribute("class", "border-draw reset");
   var canvas = document.getElementById('canvas');
