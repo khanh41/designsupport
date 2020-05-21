@@ -1,6 +1,5 @@
 .draw {
     margin-top: 100px;
-    margin-bottom: 100px;
 }
 
 .draw-canvas {
@@ -32,3 +31,77 @@
   padding: 6% 0%;
 }
 
+.arrow-right {
+    width: 20px;
+    height: 20px;
+}
+
+.next-post {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.btn-next-post {
+    width: 100%;
+}
+
+.modal-design-diea {
+    padding-top: 20px;
+}
+
+li {
+  display: inline-block;
+}
+
+input[type="checkbox"][id^="myCheckbox"] {
+  display: none;
+}
+
+.myListImage {
+  padding: 10px;
+  display: block;
+  position: relative;
+  cursor: pointer;
+  margin-bottom: 0;
+}
+
+.myListImage:before {
+  color: white;
+  content: " ";
+  display: block;
+  border-radius: 50%;
+  border: 1px solid grey;
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  line-height: 28px;
+  transition-duration: 0.4s;
+  transform: scale(0);
+}
+
+.myListImage img {
+  transition-duration: 0.2s;
+  transform-origin: 50% 50%;
+}
+
+:checked + .myListImage {
+  border-color: #ddd;
+}
+
+:checked + .myListImage:before {
+  content: "V";
+  background-color: grey;
+  transform: scale(1);
+}
+
+:checked + .myListImage img {
+  transform: scale(0.9);
+  z-index: -1;
+}
+
+.modal-design {
+    max-width: 900px;
+}

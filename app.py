@@ -1,9 +1,14 @@
+#!flask/bin/python
+################################################################################################################################
+#------------------------------------------------------------------------------------------------------------------------------                                                                                                                             
+# This file implements the REST layer. It uses flask micro framework for server implementation. Calls from front end reaches 
+# here as json and being branched out to each projects. Basic level of validation is also being done in this file. #                                                                                                                                  	       
+#-------------------------------------------------------------------------------------------------------------------------------                                                                                                                              
+################################################################################################################################
 from flask import Flask, jsonify, abort, request, make_response, url_for,redirect, render_template
 from flask_httpauth import HTTPBasicAuth
 from werkzeug.utils import secure_filename
-import requests
 import os
-from io import BytesIO
 import sys
 sys.path.append('../')
 import shutil 
@@ -15,12 +20,10 @@ from scipy import ndimage
 from scipy.misc import imsave 
 from firebase.firebase import FirebaseAuthentication,FirebaseApplication
 from PIL import Image
-from flask_ngrok import run_with_ngrok
 UPLOAD_FOLDER = 'uploads'
 ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg'])
 from tensorflow.python.platform import gfile
 app = Flask(__name__, static_url_path = "")
-run_with_ngrok(app)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 auth = HTTPBasicAuth()
 extracted_features=np.zeros((10000,2048),dtype=np.float32)
@@ -32,11 +35,6 @@ print("loaded extracted_features")
 @app.route('/login')
 def login():
         return render_template("login.html")
-
-@app.route('/product')
-def product():
-        return render_template("product.html")
-
 
 @app.route('/getstarted')
 def getstarted():
@@ -53,23 +51,13 @@ def upload_img():
  
     if request.method == 'POST' or request.method == 'GET':
         print(request.method)
-        # check if the post request has the file part
-        if 'file' not in request.files:
-           
-            print('No file part')
-            return redirect(request.url)
-        
-        file = request.files['file']
-        print(file.filename)
-        # if user does not select file, browser also
-        # submit a empty part without filename
-        if file.filename == '':
-           
-            print('No selected file')
-            return redirect(request.url)
-        if file and allowed_file(file.filename):
-         
-            filename = secure_filename(file.filename)
+        file = request.form['text']
+        print(file)
+        print("?/.????????????????")
+        if file and allowed_file(file):
+            print(file)
+            filename = file
+            file = Image.open(file)
             file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
             inputloc = os.path.join(app.config['UPLOAD_FOLDER'], filename)
             #outputloc = '/home/vinayak/todo-api/out'
@@ -86,8 +74,11 @@ def upload_img():
 			'image3':image_list[3],	
 			'image4':image_list[4],	
 			'image5':image_list[5],	
-			'image6':image_list[6]
+			'image6':image_list[6],	
+			'image7':image_list[7],	
+			'image8':image_list[8]
 		      }
+            print(image_list[0])
             return jsonify(images)
 #def post_firebase(images):
 #    app = FirebaseApplication('https://smartmachine-ed87d.firebaseio.com/')
@@ -99,6 +90,6 @@ def allowed_file(filename):
 @app.route("/")
 def main():
     
-    return render_template("home.html")   
+    return render_template("index.html")   
 if __name__ == '__main__':
-    app.run()
+    app.run(debug = True,host='192.168.1.136')
