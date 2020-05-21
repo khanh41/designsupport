@@ -33,7 +33,7 @@ load = new loadData();
 function viewDetail(id){
     id = parseInt(id);
     id = id+1;
-    window.location="detail.html?"+id;
+    window.location="u98detail?"+id;
     document.getElementById("title").innerHTML+=list[id].title;
    
 }
